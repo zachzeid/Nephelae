@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="static/base.css">
   <title>CFT Template Generator</title>
   </head>
   <body>
@@ -45,13 +45,16 @@
 
             <div>
               <div>
-                <button type="button" class="btn btn-primary">Add VPC</button>
+                <button type="button" class="btn btn-danger" id="remove-vpc">Remove VPC</button>
               </div>
-            </div><!-- add vpc .form-group -->
-
-            <div>
-              <button type="button" class="btn btn-danger">Delete VPC</button>
             </div><!-- remove vpc .form-group -->
+
+            <div class="row">
+              <div class="col-6" id="add-vpc-col">
+                <button type="button" class="btn btn-primary" id="add-vpc">Add VPC</button>
+              </div><!-- end .col -->
+            </div><!-- end .row -->
+
           </form>
 
         </div><!-- .col  -->
