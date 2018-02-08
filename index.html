@@ -34,31 +34,24 @@
               <input class="form-control" type="text" id="subnet1">
             </div><!-- subnet cidr .form-group -->
 
-            <div class="form-group">
-              <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="auto-ip">
-                <label class="form-check-label" for="auto-ip">
-                  Public?
-                </label>
-              </div>
-            </div><!-- public checkbox .form-group -->
 
-            <div>
-              <div>
-                <button type="button" class="btn btn-danger" id="remove-vpc">Remove VPC</button>
-              </div>
-            </div><!-- remove vpc .form-group -->
-
-            <div class="row">
-              <div class="col-6" id="add-vpc-col">
-                <button type="button" class="btn btn-primary" id="add-vpc">Add VPC</button>
-              </div><!-- end .col -->
-            </div><!-- end .row -->
-
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="auto-ip">
+              <label class="form-check-label" for="auto-ip">
+                Public?
+              </label>
+            </div>
+            <button type="button" class="btn btn-danger" id="remove-vpc">Remove VPC</button>
           </form>
-
         </div><!-- .col  -->
       </div><!-- .row .justify-content-center -->
+      
+      <div class="row">
+        <div class="col-6" id="add-vpc-col">
+          <button type="button" class="btn btn-primary" id="add-vpc">Add VPC</button>
+        </div><!-- end .col -->
+      </div><!-- end .row -->
+
     </div> <!-- .container -->
 
     <!-- Optional JavaScript -->
