@@ -19,22 +19,22 @@
         <div class="col-6">
           <h2>VPC 1</h2>
           <form>
-            <div class="form-group mb-2">
-              <label class="form-check-label" for="vpc-cidr">VPC CIDR</label>
+            <div class="form-group">
+              <label for="vpc-cidr">VPC CIDR</label>
               <input class="form-control" type="text" id="vpc-cidr">
             </div> <!-- vpc .form-group -->
 
-            <div class="form-group mb-2">
-              <label class="form-check-label" for="subnet-count"># of subnets</label>
+            <div class="form-group">
+              <label for="subnet-count"># of subnets</label>
               <input class="form-control" type="text" id="subnet-count">
             </div><!-- subnet count .form-group -->
 
-            <div class="form-group mb-2">
-              <label class="form-check-label" for="subnet1">Subnet CIDR</label>
+            <div class="form-group">
+              <label for="subnet1">Subnet CIDR</label>
               <input class="form-control" type="text" id="subnet1">
             </div><!-- subnet cidr .form-group -->
 
-            <div class="form-group mb-2">
+            <div class="form-group">
               <div class="form-check form-check-inline">
                 <input type="checkbox" class="form-check-input" id="auto-ip">
                 <label class="form-check-label" for="auto-ip">
@@ -43,14 +43,14 @@
               </div>
             </div><!-- public checkbox .form-group -->
 
-            <div class="form-group mb-2">
+            <div>
               <div>
                 <button type="button" class="btn btn-primary">Add VPC</button>
               </div>
             </div><!-- add vpc .form-group -->
 
-            <div class="form-group mb-2">
-              <button type="button" class="btn btn-primary">Delete VPC</button>
+            <div>
+              <button type="button" class="btn btn-danger">Delete VPC</button>
             </div><!-- remove vpc .form-group -->
           </form>
 
