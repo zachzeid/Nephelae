@@ -1,0 +1,22 @@
+{
+  "name": "cft-ui",
+  "version": "1.0.0",
+  "description": "Frontend UI for CloudFormation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachzeid/Nephelae.git"
+  },
+  "author": "Zach Zeid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachzeid/Nephelae/issues"
+  },
+  "homepage": "https://github.com/zachzeid/Nephelae#readme",
+  "dependencies": {
+    "ip-cidr": "^1.1.2"
+  }
+}
