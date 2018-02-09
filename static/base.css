@@ -1,3 +1,6 @@
 #add-vpc-col {
-  border-top: 1px solida #444
+  border-top: 1px solid #444;
+}
+button {
+  margin: 1rem 0;
 }
