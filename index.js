@@ -12,22 +12,17 @@ $(document).ready(() => {
     // var cidr = new Address4(vpcCidr);
   });
 
-  // $('#subnet-count').change((event) => {
-  //
-  // });
-  // let step;
-  // for (step = 0; step < 5; step += 1) {
-  //   console.log('walking east one step', step);
-  // };
+
   $('#subnet-count').change((event) => {
     const $selector = $('#subnet-main');
     const subnetCount = $(event.currentTarget).val();
+    if (subnetCount == 0) {
+      alert('Cannot have 0 subnets!');
+    }
     for (let count = 0; count <= subnetCount; count += 1) {
       console.log(`subnet-${count}`);
       $selector.append($(`<label for="subnet-${count}">Subnet CIDR</label>`));
-      $selector.append($(`< input class = "form-control"
-                    type = "text"
-                    id = "subnet-${count}" >`));
+      $selector.append($(`<input class="form-control" type = "text" id="subnet-${count}" >`));
     }
   });
   $('#subnet1').change((event) => {
