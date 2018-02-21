@@ -26,21 +26,13 @@
 
             <div class="form-group">
               <label for="subnet-count"># of subnets</label>
-              <input class="form-control" type="text" id="subnet-count" data-rule-number="true">
+              <input class="form-control" type="text" id="subnet-count" data-rule-number="true" data-rule-min="1" data-rule-max="200">
             </div><!-- subnet count .form-group -->
 
-            <div class="form-group" id="subnet-main">
-              <label for="subnet1">Subnet #1 CIDR</label>
-              <input class="form-control" type="text" id="subnet1">
+            <div id="subnet-main">
+
             </div><!-- subnet cidr .form-group -->
 
-
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="auto-ip">
-              <label class="form-check-label" for="auto-ip">
-                Public?
-              </label>
-            </div>
             <button type="button" class="btn btn-danger" id="remove-vpc">Remove VPC</button>
           </form>
         </div><!-- .col  -->

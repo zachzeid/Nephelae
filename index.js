@@ -5,28 +5,29 @@ $(document).ready(() => {
   }, 'Invalid IP Address');
 
   $('form').validate();
-  console.log('Document ready');
-  $('#vpc-cidr').change((event) => {
-    const vpcCidr = $(event.currentTarget).val();
-    console.log(vpcCidr);
-    // var cidr = new Address4(vpcCidr);
-  });
-
-
-  $('#subnet-count').change((event) => {
+  // 2000 as a value breaks.
+  $('form').on('change', '#subnet-count', () => {
     const $selector = $('#subnet-main');
-    const subnetCount = $(event.currentTarget).val();
-    if (subnetCount == 0) {
-      alert('Cannot have 0 subnets!');
+    const subnetCount = $('#subnet-count').val();
+    $selector.empty();
+    if ($('#subnet-count').hasClass('error')) {
+      return;
     }
-    for (let count = 0; count <= subnetCount; count += 1) {
-      console.log(`subnet-${count}`);
-      $selector.append($(`<label for="subnet-${count}">Subnet CIDR</label>`));
-      $selector.append($(`<input class="form-control" type = "text" id="subnet-${count}" >`));
+    for (let count = 1; count <= subnetCount; count += 1) {
+      $selector.append($(`
+        <div class="form-group">
+          <label for="subnet-${count}">Subnet CIDR #${count}</label>
+          <input class="form-control" type = "text" id="subnet-${count}" data-rule-address4="true">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="auto-ip-${count}">
+            <label class="form-check-label" for="auto-ip-${count}">Public?</label>
+          </div>
+        </div>
+        `));
     }
   });
   $('#subnet1').change((event) => {
-    const vpcCidr = new Address4('192.168.1.0/27');
+    const vpcCidr = new Address4($('#vpc-cidr').val());
     const address = new Address4($(event.currentTarget).val());
     console.log(address.isInSubnet(vpcCidr));
     if (address.isInSubnet(vpcCidr)) {
