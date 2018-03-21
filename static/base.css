@@ -1,5 +1,6 @@
-#add-vpc-col {
-  border-top: 1px solid #444;
+.error {
+  color: red;
+  border-color: red;
 }
 button {
   margin: 1rem 0;
