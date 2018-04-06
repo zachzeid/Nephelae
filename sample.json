@@ -1,0 +1,18 @@
+{
+  "vpccidr": "String",
+  "subnets": [
+  {
+    "cidr": "String",
+    "public": "Boolean",
+  },
+  {
+    "cidr": "String",
+    "public": "Boolean",
+  },
+  {
+  "cidr": "String",
+  "public": "Boolean",
+}
+]
+
+}
